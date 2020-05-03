@@ -1,0 +1,211 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #000;
+    font-family: '微軟正黑體';
+    /* overflow: hidden; */
+}
+header{
+    /* border: 1px solid #ffffff; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+div.titleBox{
+    position: relative;
+    /* border: 1px solid blue; */
+    width: 550px;
+}
+img.title{
+    position: relative;
+    width: 550px;
+    z-index: 10;
+}
+img.titleBomb{
+    width: 130px;
+    position: absolute;
+    left: -100px;
+    top: 0px;
+    z-index: 0;
+    animation: titleBomb .3s  infinite alternate-reverse;
+}
+@keyframes titleBomb{
+    from{ transform: scale(1);}
+    to{ transform: scale(1.2);}
+}
+
+/* = = = = = 主內容 = = = = = */
+div.contain{
+    /* border: 1px solid #ffffff; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#codeBlock{
+    margin-bottom: 30px;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
+    letter-spacing: 8px;
+    background-color: #1e1e1e;
+    font-size: 100px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 800;
+}
+div.keyInBlock{
+    /* border: 1px solid red; */
+    display: inline-block;
+    width: 700px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.showNumBlock{
+    /* border: 1px solid #FED100; */
+    position: relative;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.showNumBlock p{
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-align: center;
+}
+#showNum{
+    /* border: 1px solid #ffffff; */
+    display: inline-block;
+    margin-bottom: 30px;
+    height: 100px;
+    width: 150px;
+    font-size: 70px;
+    font-weight: 800;
+}
+#btnSandOut,#btnReset{
+    display: inline-block;
+    width: 80px;
+    height: 60px;
+    background-color: #646464;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0px 5px;
+}
+
+/* = = = = = 提示 = = = = = */
+div.tip{
+    display: none;
+    background-color: #FED100;
+    color: #000;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    padding: 10px;
+    font-weight: 800;
+    border-radius: 10px;
+    position: absolute;
+    top: -60px;
+}
+span.arrow{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    /* border: 10px solid #FED100; */
+    border-bottom: 15px solid transparent;
+    border-top: 15px solid #FED100;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    position: absolute;
+    bottom: -30px;
+    left: 120px;
+}
+
+/* = = = = = 數字按鈕 = = = = = */
+div.numBtnBlock{
+    /* border: 1px solid blue; */
+    margin-left: 30px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+div.numBtn{
+    display: inline-block;
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background-color: #646464;
+    margin: 5px;
+    font-size: 60px;
+    font-weight: 800;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* = = = = = footer = = = = = */
+footer{
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    height: 250px;
+    background-image: url(../img/fireFooter.png);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+div.copy{
+    width: 100%;
+    height: 30px;
+    background-color: #FED100;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* = = = = = boom!! = = = = =*/
+div.blackBox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+div.lightBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#againBtn{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+    background-color: #646464;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 50px;
+    cursor: pointer;
+    border: 3px solid #ffffff;
+}
